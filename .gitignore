@@ -1,0 +1,13 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Gemini/Antigravity Artifacts (Optional, keeping project clean)
+.gemini/
+artifacts/
+*.webp
+*.png
+
+# Node (in case they use it later)
+node_modules/
+npm-debug.log

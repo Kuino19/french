@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇫🇷 Comprehensive French Quiz | Master the Language</title>
+    <meta name="description" content="Test your French skills with this interactive, 60-question quiz covering grammar, vocabulary, and culture.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    
+    <main class="app-container">
+        <!-- Landing View -->
+        <section id="landing-view" class="view active">
+            <div class="glass-card hero-card">
+                <div class="hero-image-container">
+                    <img src="bg.png" alt="Quiz Background" class="hero-image">
+                    <div class="hero-vignette"></div>
+                </div>
+                <div class="hero-content">
+                    <div class="badge">Comprehensive Test</div>
+                    <h1>Choose Your <span class="text-accent">Challenge</span></h1>
+                    <p>Select a module below to start your French proficiency test.</p>
+                    
+                    <div class="module-grid">
+                        <div class="module-card" onclick="startQuiz('foundation')">
+                            <div class="module-icon"><i class="fa-solid fa-seedling"></i></div>
+                            <div class="module-info">
+                                <h3>Foundational Basics</h3>
+                                <p>Greetings, Numbers, Parts of Speech, and Basic Vocabulary.</p>
+                            </div>
+                            <div class="module-footer">
+                                <span>60 Questions</span>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+
+                        <div class="module-card" onclick="startQuiz('grammar')">
+                            <div class="module-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div class="module-info">
+                                <h3>Intermediate Grammar</h3>
+                                <p>Pronouns, Future Tense, Relative Clauses, and Negation.</p>
+                            </div>
+                            <div class="module-footer">
+                                <span>60 Questions</span>
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz View -->
+        <section id="quiz-view" class="view">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar-bg">
+                        <div id="progress-bar-fill" style="width: 0%;"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span id="question-counter">Question 1 of 60</span>
+                        <span id="section-name">Pronunciation & Greetings</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card quiz-card">
+                <div id="question-container">
+                    <h2 id="question-text">Loading question...</h2>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options will be injected here -->
+                    </div>
+                    <div id="explanation-container" class="explanation-box hidden">
+                        <div class="explanation-header">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>Le Saviez-vous ?</span>
+                        </div>
+                        <p id="explanation-text"></p>
+                    </div>
+                </div>
+                
+                <div class="quiz-footer">
+                    <button id="prev-btn" class="btn btn-outline" disabled>
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <span>Previous</span>
+                    </button>
+                    <button id="next-btn" class="btn btn-primary" disabled>
+                        <span>Next</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results View -->
+        <section id="results-view" class="view">
+            <div class="glass-card results-card">
+                <div class="results-header">
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path id="score-circle-fill" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage" id="result-score-text">0/60</text>
+                        </svg>
+                    </div>
+                    <h2 id="result-title">Excellent Travail !</h2>
+                    <p id="result-message">You've completed the comprehensive French quiz. Here's your final breakdown.</p>
+                </div>
+
+                <div class="results-breakdown">
+                    <!-- Breakdown items will be injected here -->
+                </div>
+
+                <div class="results-actions">
+                    <button id="restart-btn" class="btn btn-primary btn-lg">
+                        <i class="fa-solid fa-rotate-right"></i>
+                        <span>Recommencer</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
