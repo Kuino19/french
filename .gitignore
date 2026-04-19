@@ -2,12 +2,11 @@
 .DS_Store
 Thumbs.db
 
-# Gemini/Antigravity Artifacts (Optional, keeping project clean)
+# Gemini/Antigravity Artifacts (keeping project clean)
 .gemini/
 artifacts/
 *.webp
-*.png
 
-# Node (in case they use it later)
+# Node
 node_modules/
 npm-debug.log
