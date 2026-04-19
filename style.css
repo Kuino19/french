@@ -132,6 +132,44 @@ h1, h2, h3 {
     text-align: center;
 }
 
+/* Welcome Banner */
+.welcome-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 10px 22px;
+    background: rgba(255, 80, 130, 0.1);
+    border: 1px solid rgba(255, 80, 130, 0.25);
+    border-radius: 100px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.welcome-text {
+    font-size: 14px;
+    color: #ffb3cc;
+    letter-spacing: 0.5px;
+}
+
+.welcome-text strong {
+    color: #ff6fa0;
+    font-weight: 700;
+}
+
+.welcome-heart {
+    font-size: 16px;
+    animation: heartbeat 1.4s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+}
+
 .badge {
     display: inline-block;
     padding: 6px 16px;
