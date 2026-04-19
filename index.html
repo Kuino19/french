@@ -19,7 +19,23 @@
 </head>
 <body>
     <div class="bg-overlay"></div>
-    
+
+    <!-- Milestone Banner (Fixed Top) -->
+    <div id="milestone-banner" class="milestone-banner">
+        <span class="milestone-icon">💝</span>
+        <span id="milestone-text">You're doing amazing!</span>
+        <button onclick="dismissMilestone()" class="milestone-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+    <!-- Streak Popup (Fixed Bottom) -->
+    <div id="streak-popup" class="streak-popup hidden">
+        <span>🔥</span>
+        <span id="streak-text"></span>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confetti-container"></div>
+
     <main class="app-container">
         <!-- Landing View -->
         <section id="landing-view" class="view active">
@@ -121,7 +137,8 @@
                         </svg>
                     </div>
                     <h2 id="result-title">Excellent Travail !</h2>
-                    <p id="result-message">You've completed the comprehensive French quiz. Here's your final breakdown.</p>
+                    <p id="result-message">You've completed the quiz. Here's your breakdown.</p>
+                    <div id="love-result-message" class="love-result-message"></div>
                 </div>
 
                 <div class="results-breakdown">
@@ -137,6 +154,30 @@
             </div>
         </section>
     </main>
+
+    <!-- Love Start Modal -->
+    <div id="love-modal" class="love-modal-overlay hidden">
+        <div class="love-modal-card glass-card">
+            <div class="love-modal-hearts">
+                <span class="floating-heart" style="--delay:0s;--duration:4s">💖</span>
+                <span class="floating-heart" style="--delay:0.7s;--duration:5s">💝</span>
+                <span class="floating-heart" style="--delay:1.2s;--duration:3.5s">💖</span>
+                <span class="floating-heart" style="--delay:0.3s;--duration:4.5s">💕</span>
+                <span class="floating-heart" style="--delay:1.8s;--duration:5s">💗</span>
+            </div>
+            <div class="love-modal-content">
+                <div class="love-modal-badge">From someone who loves you 💌</div>
+                <h2 class="love-modal-title">Hey, <span class="text-accent-pink">Racheal</span> 💖</h2>
+                <p class="love-modal-message" id="love-modal-message">
+                    I made this just for you. Take a deep breath, trust yourself, and remember — I believe in you with my whole heart. Bonne chance! 🌟
+                </p>
+                <button id="love-modal-btn" class="btn love-modal-btn">
+                    <span>Je suis prête ! 💪</span>
+                    <i class="fa-solid fa-heart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- JS Scripts -->
     <script src="script.js"></script>
